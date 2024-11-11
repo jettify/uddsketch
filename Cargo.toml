@@ -1,11 +1,8 @@
 [package]
-
-=======
 name = "uddsketch"
-version = "0.1.0"
-edition = "2018"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+version = "0.0.1"
+authors = ["Nikolay Novik <nickolainovik@gmail.com>"]
+edition = "2021"
 
 readme = "README.md"
 description = "Implementation of uddsketch histogram"
@@ -21,3 +18,14 @@ categories = ["algorithms", "data-structures"]
 license = "Apache-2.0"
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+ordered-float = { version = "1.0", features = ["serde"] }
+
+[dev-dependencies]
+rand = "0.8.0"
+rand_distr = "0.4.0"
+approx = "0.5.1"
+rand_isaac = "0.3.0"
+
+[profile.release]
+debug = true
